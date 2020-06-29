@@ -1,0 +1,55 @@
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript,
+if it's not present, don't show loader */
+html, body{
+height: 100%;
+}
+.loader-cent{
+  height: 100%;
+  position: relative;
+}
+.se-pre-con{
+  display: none;
+}
+.loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width:800px) {
+  .loader-cent{
+    width: 100%;
+  text-align: center;
+  }
+  .loader {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 30px;
+    height: 30px;
+    top: 45% !important;
+    display: inline-block;
+    -webkit-animation: spin 0.5s linear infinite; /* Safari */
+    animation: spin 0.5s linear infinite;
+  }
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
